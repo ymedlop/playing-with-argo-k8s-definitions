@@ -1,1 +1,12 @@
-
+spec:
+  destination:
+    server: https://kubernetes.docker.internal:6443
+  source:
+    repoURL: https://github.com/ymedlop-cloud/k8s-definitions.git
+    targetRevision: docker-desktop
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
