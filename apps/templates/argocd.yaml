@@ -6,15 +6,15 @@ spec:
   destination:
     namespace: argocd
     server: {{ .Values.spec.destination.server }}
- project: argocd
- source:
-  directory:
-    jsonnet: {}
-    recurse: true
-  path: ./argocd
-  repoURL: {{ .Values.spec.source.repoURL }}
-  targetRevision: {{ .Values.spec.source.targetRevision }}
- syncPolicy:
+  project: argocd
+  source:
+    directory:
+      jsonnet: {}
+      recurse: true
+    path: ./argocd
+    repoURL: {{ .Values.spec.source.repoURL }}
+    targetRevision: {{ .Values.spec.source.targetRevision }}
+  syncPolicy:
     automated:
       prune: {{ .Values.spec.syncPolicy.automated.prune }}
       selfHeal: {{ .Values.spec.syncPolicy.automated.selfHeal }}
