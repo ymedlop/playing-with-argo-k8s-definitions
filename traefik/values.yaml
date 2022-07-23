@@ -1,21 +1,3 @@
 traefik:
   additionalArguments:
-    - --api
-    - --api.insecure=true 
-    #- --configfile=/etc/traefik/traefik.yaml
-    - --insecureskipverify            #如果后端服务是https协议时不验证其证书
-    #- --defaultEntryPoints=http,https #traefik同时开启HTTP和HTTPS服务
-    - --entrypoints=Name:https Address::443 TLS #HTTPS服务监听在443端口
-    - --entrypoints=Name:http Address::80 #HTTPS服务监听在443端口，与http跳转https配置冲突，只能配置一项；
-    #- --entrypoints=Name:http Address::80 Redirect.EntryPoint:https #HTTP监听在80端口，并将流量重定向至https
-    - --certificatesresolvers.letsencrypt.acme                         #开启证书验证
-    - --certificatesresolvers.letsencrypt.acme.email=zhaowangda@126.com   #用于注册的邮箱地址
-    - --certificatesresolvers.letsencrypt.acme.storage=/data/acme.json  #证书申请临时文件存储位置
-    #- --certificatesresolvers.letsencrypt.acme.acmeLogging=true        #打开日志，方便排错
-    #- --certificatesresolvers.letsencrypt.acme.entryPoint=https        #证书类型，必需指向到一个443端口
-    #- --certificatesresolvers.letsencrypt.acme.httpchallenge.entrypoint=http    # 验证域名时使用的协议
-    - --certificatesresolvers.letsencrypt.acme.dnschallenge                     # 域名验证方式
-    - --certificatesresolvers.letsencrypt.acme.dnschallenge.provider=alidns     # 域名提供商
-    - --certificatesresolvers.letsencrypt.acme.dnschallenge.delaybeforecheck=5  # 验证域名延时
-  #  - "--providers.kubernetesingress.ingressclass=traefik-internal"
-  #  - "--log.level=DEBUG"
+    - --insecureskipverify
