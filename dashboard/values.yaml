@@ -1,0 +1,9 @@
+kubernetes-dashboard:
+  ingress:
+    enabled: true
+    annotations:
+       kubernetes.io/ingress.class: traefik
+    hosts:
+      - k8sdashboard.localhost
+    paths:
+      - /
