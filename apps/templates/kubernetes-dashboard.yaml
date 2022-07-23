@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dashboard
+  name: kubernetes-dashboard
 spec:
   destination:
-    namespace: dashboard
+    namespace: kubernetes-dashboard
     server: {{ .Values.spec.destination.server }}
-  project: dashboard
+  project: kubernetes-dashboard
   source:
-    path: ./dashboard
+    path: ./kubernetes-dashboard
     repoURL: {{ .Values.spec.source.repoURL }}
     targetRevision: {{ .Values.spec.source.targetRevision }}
     helm:

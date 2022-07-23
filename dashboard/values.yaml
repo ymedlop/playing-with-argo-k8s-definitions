@@ -4,6 +4,6 @@ kubernetes-dashboard:
     annotations:
        kubernetes.io/ingress.class: traefik
     hosts:
-      - k8sdashboard.localhost
+      - kubernetes-dashboard.localhost
     paths:
       - /
