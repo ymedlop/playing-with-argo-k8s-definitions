@@ -1,0 +1,10 @@
+apiVersion: v2
+name: definitions
+description: definitions
+type: application
+version: 1.0.0
+
+dependencies:
+  - name: kubernetes-dashboard
+    version: 2.6.0
+    repository: https://kubernetes.github.io/dashboard/
