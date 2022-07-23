@@ -12,3 +12,4 @@ traefik:
     - --api
     - --api.insecure=true
     - --serverstransport.insecureskipverify=true
+    - --logLevel=DEBUG
