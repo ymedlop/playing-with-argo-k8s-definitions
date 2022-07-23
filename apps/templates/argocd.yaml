@@ -8,6 +8,9 @@ spec:
     server: {{ .Values.spec.destination.server }}
  project: argocd
  source:
+  directory:
+    jsonnet: {}
+    recurse: true
   path: ./argocd
   repoURL: {{ .Values.spec.source.repoURL }}
   targetRevision: {{ .Values.spec.source.targetRevision }}
