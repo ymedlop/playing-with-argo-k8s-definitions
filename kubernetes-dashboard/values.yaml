@@ -1,13 +1,14 @@
 kubernetes-dashboard:
   ingress:
     enabled: true
-    className: traefik
     annotations:
        kubernetes.io/ingress.class: traefik
-       traefik.frontend.rule.type: PathPrefixStrip
        traefik.ingress.kubernetes.io/router.entrypoints: websecure
        traefik.ingress.kubernetes.io/router.tls: "true"
     hosts:
       - kubernetes-dashboard.localhost
     paths:
       - /
+    tls:
+      - hosts:
+        - kubernetes-dashboard.localhost
