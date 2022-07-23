@@ -11,3 +11,4 @@ traefik:
     - --providers.kubernetesingress
     - --api
     - --api.insecure=true
+    - --serverstransport.insecureskipverify=true
