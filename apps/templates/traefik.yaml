@@ -8,12 +8,12 @@ spec:
     server: {{ .Values.spec.destination.server }}
   project: traefik
   source:
-    directory:
-      jsonnet: {}
-      recurse: true
     path: ./traefik
     repoURL: {{ .Values.spec.source.repoURL }}
     targetRevision: {{ .Values.spec.source.targetRevision }}
+    helm:
+      valueFiles:
+        - values.yaml
   syncPolicy:
     automated:
       prune: {{ .Values.spec.syncPolicy.automated.prune }}
