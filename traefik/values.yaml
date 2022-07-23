@@ -1,2 +1,3 @@
 traefik:
   fullnameOverride: traefik
+  nameOverride: traefik
