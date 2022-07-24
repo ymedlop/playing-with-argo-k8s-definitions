@@ -12,4 +12,4 @@ kubernetes-dashboard:
     tls:
       - secretName: default
         hosts:
-          - kubernetes-dashboard.localhost
+          - localhost
