@@ -1,15 +1,18 @@
 traefik:
   additionalArguments:
-    - --global.checknewversion
-    - --global.sendanonymoususage
-    - --entryPoints.traefik.address=:9000/tcp
-    - --entryPoints.web.address=:8000/tcp
-    - --entryPoints.websecure.address=:8443/tcp
-    - --api.dashboard=true
-    - --ping=true
-    - --providers.kubernetescrd
-    - --providers.kubernetesingress
     - --api
-    - --api.insecure=true
+    - --api.insecure
+    - --api.dashboard=true
+    - --accesslog
+    - --global.checknewversion=true
+    - --entryPoints.traefik.address=:8100
+    - --entryPoints.web.address=:80
+    - --entryPoints.websecure.address=:443
+    # permanent redirecting of all requests on http (80) to https (443)
+    - --entrypoints.web.http.redirections.entryPoint.to=websecure
+    - --entrypoints.websecure.http.tls.certResolver=default
+    - --ping=true
+    - --providers.kubernetescrd=true
+    - --providers.kubernetesingress=true
     - --serversTransport.insecureSkipVerify=true
     - --log.level=DEBUG
