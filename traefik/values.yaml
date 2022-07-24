@@ -8,7 +8,8 @@ traefik:
     - --api.dashboard=true
     - --ping=true
     - --providers.kubernetescrd
-    - --providers.kubernetesingress
+    - --providers.kubernetesingress=true
     - --api
     - --api.insecure=true
-    - --serverstransport.insecureskipverify=true
+    - --serversTransport.insecureskipverify=true
+    - --log.level=DEBUG
