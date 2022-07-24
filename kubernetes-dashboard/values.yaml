@@ -9,7 +9,3 @@ kubernetes-dashboard:
       - kubernetes-dashboard.localhost
     paths:
       - /
-    tls:
-      - secretName: default
-        hosts:
-          - localhost
