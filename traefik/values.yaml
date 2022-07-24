@@ -7,8 +7,8 @@ traefik:
     - --entryPoints.websecure.address=:8443/tcp
     - --api.dashboard=true
     - --ping=true
-    - --providers.kubernetescrd
-    - --providers.kubernetesingress
+    - --providers.kubernetescrd=true
+    - --providers.kubernetesingress=true
     - --api
     - --api.insecure=true
     - --serversTransport.insecureskipverify=true
