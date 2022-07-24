@@ -1,4 +1,7 @@
 traefik:
+  image:
+    name: traefik
+    tag: "2.8.1"
   additionalArguments:
     - --global.checknewversion
     - --entryPoints.traefik.address=:9000/tcp
