@@ -6,7 +6,7 @@ version: 1.0.0
 
 dependencies:
   - name: traefik
-    version: 10.0.0
+    version: 10.24.0
     repository: https://helm.traefik.io/traefik
   - name: resources
     version: 1.0.0
