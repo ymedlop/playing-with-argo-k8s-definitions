@@ -3,14 +3,13 @@ kubernetes-dashboard:
     enabled: true
     annotations:
        kubernetes.io/ingress.class: traefik
-       traefik.ingress.kubernetes.io/router.entrypoints: websecure
-       traefik.ingress.kubernetes.io/router.tls: "true"
-       traefik.ingress.kubernetes.io/router.tls.certresolver: default
+       traefik.ingress.kubernetes.io/router.entrypoints: web
     hosts:
-      - kubernetes-dashboard.localhost
+     - kubernetes-dashboard.localhost
     paths:
       - /
-    tls:
-      - secretName: kubernetes-dashboard-certs
-        hosts:
-          - kubernetes-dashboard.localhost
+  service:
+    externalPort: 80
+  protocolHttp: true
+  extraArgs:
+    - --enable-insecure-login=true
