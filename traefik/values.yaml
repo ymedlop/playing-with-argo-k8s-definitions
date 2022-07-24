@@ -2,6 +2,10 @@ traefik:
   ingressRoute:
     dashboard:
       enabled: true
+  providers:
+    kubernetesIngress:
+      publishedService:
+        enabled: true
   ports:
     traefik:
       expose: true
