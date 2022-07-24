@@ -2,3 +2,6 @@ traefik:
   ingressRoute:
     dashboard:
       enabled: true
+  ports:
+    traefik:
+      expose: true
