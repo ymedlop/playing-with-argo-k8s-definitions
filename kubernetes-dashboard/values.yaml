@@ -1,5 +1,4 @@
 kubernetes-dashboard:
-  protocolHttp: true
   ingress:
     enabled: true
     annotations:
@@ -11,3 +10,6 @@ kubernetes-dashboard:
       - kubernetes-dashboard.localhost
     paths:
       - /
+  protocolHttp: true
+  extraArgs:
+    - --enable-insecure-login=true
