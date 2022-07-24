@@ -1,4 +1,5 @@
 kubernetes-dashboard:
+  protocolHttp: true
   ingress:
     enabled: true
     annotations:
