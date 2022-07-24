@@ -13,3 +13,5 @@ kubernetes-dashboard:
     tls:
       - hosts:
           - kubernetes-dashboard.localhost
+  extraArgs:
+    - --enable-insecure-login=true
