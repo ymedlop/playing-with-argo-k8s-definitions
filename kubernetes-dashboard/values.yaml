@@ -4,6 +4,8 @@ kubernetes-dashboard:
     annotations:
        kubernetes.io/ingress.class: traefik
        traefik.ingress.kubernetes.io/router.entrypoints: web
+    hosts:
+     - kubernetes-dashboard.localhost
     paths:
       - /
   service:
