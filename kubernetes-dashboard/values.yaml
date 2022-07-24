@@ -10,3 +10,6 @@ kubernetes-dashboard:
       - kubernetes-dashboard.localhost
     paths:
       - /
+    tls:
+      - hosts:
+          - kubernetes-dashboard.localhost
