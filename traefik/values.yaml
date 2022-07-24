@@ -5,6 +5,9 @@ traefik:
     - --entryPoints.traefik.address=:9000/tcp
     - --entryPoints.web.address=:8000/tcp
     - --entryPoints.websecure.address=:8443/tcp
+    # Static configuration
+    - --entrypoints.websecure.address=:443
+    - --entrypoints.websecure.http.tls
     - --api.dashboard=true
     - --ping=true
     - --providers.kubernetescrd=true
