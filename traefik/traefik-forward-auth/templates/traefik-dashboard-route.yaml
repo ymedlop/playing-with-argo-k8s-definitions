@@ -4,10 +4,10 @@ metadata:
   name: traefik-dashboard
 spec:
   entryPoints:
-    - traefik
+    - web
   routes:
     - kind: Rule
-      match: PathPrefix(`/dashboard`) || PathPrefix(`/api`)
+      match: Host(`traefik.localhost`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
       services:
         - kind: TraefikService
           name: api@internal
