@@ -14,7 +14,7 @@ oauth2-proxy:
     - --redeem-url=https://login.microsoftonline.com/9bdc7505-8e8f-4c10-94aa-c87e1bdf110a/v2.0/oauth2/token 
     - --oidc-jwks-url=https://login.microsoftonline.com/common/discovery/keys
     - --profile-url=https://graph.microsoft.com/v1.0/me
-    - --scope='openid email profile offline_access'
+    - --scope=openid
   ingress:
     # TODO:
     enabled: false
