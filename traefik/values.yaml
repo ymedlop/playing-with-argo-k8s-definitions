@@ -1,11 +1,11 @@
 traefik:
   ingressRoute:
     dashboard:
-      enabled: true
+      enabled: false
   providers:
     kubernetesIngress:
       publishedService:
         enabled: true
   ports:
     traefik:
-      expose: true
+      expose: false
