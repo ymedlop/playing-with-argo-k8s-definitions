@@ -10,9 +10,8 @@ oauth2-proxy:
     - --azure-tenant=9bdc7505-8e8f-4c10-94aa-c87e1bdf110a
     - --oidc-issuer-url=https://sts.windows.net/9bdc7505-8e8f-4c10-94aa-c87e1bdf110a/
     - --email-domain=*
-    - --request-logging=true
-    - --auth-logging=true
-    - --standard-logging=true
+    - --skip-jwt-bearer-tokens=true
+    - --extra-jwt-issuers=https://login.microsoftonline.com/9bdc7505-8e8f-4c10-94aa-c87e1bdf110a/v2.0=2d66d1f3-867b-481c-b6ed-764efd4af6a8
 
   ingress:
     # TODO:
