@@ -6,12 +6,11 @@ oauth2-proxy:
     clientID: 2d66d1f3-867b-481c-b6ed-764efd4af6a8
   args:
     - --provider=azure
+    - --azure-tenant=9bdc7505-8e8f-4c10-94aa-c87e1bdf110a
     - --oidc-issuer-url=https://sts.windows.net/9bdc7505-8e8f-4c10-94aa-c87e1bdf110a/
     - --email-domain=*
-    - --http-address=0.0.0.0:4180
-    - --azure-tenant=9bdc7505-8e8f-4c10-94aa-c87e1bdf110a
-    - --pass-access-token=true
-    - --set-xauthrequest=true
+    - '--skip-jwt-bearer-tokens=true'
+    
   ingress:
     # TODO:
     enabled: false
