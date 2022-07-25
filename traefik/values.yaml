@@ -9,7 +9,7 @@ traefik:
   ports:
     traefik:
       expose: true
-  args:
+  additionalArguments:
     - --global.checknewversion
     - --entrypoints.metrics.address=:9100/tcp
     - --entrypoints.traefik.address=:9000/tcp
