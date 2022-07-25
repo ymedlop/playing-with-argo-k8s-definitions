@@ -1,6 +1,7 @@
 oauth2-proxy:
   configuration:
     cookieSecret: wquLuiPVJ2vVLgWlU8Vwxy6xXS5RLBxqwwkycyGST_I=
+    # Expires: 7/26/2022
     clientSecret: uZJ8Q~kw9jsFryOoxolPnkTmBnEL__OAfqO~Yac1
     clientID: 9bdc7505-8e8f-4c10-94aa-c87e1bdf110a
   args:
@@ -12,3 +13,9 @@ oauth2-proxy:
     - --pass-access-token=true
     - --resource=6dae42f8-4368-4678-94ff-3960e28e3630
     - --set-xauthrequest=true
+  ingress:
+    enabled: true
+    annotations:
+       kubernetes.io/ingress.class: traefik
+       traefik.ingress.kubernetes.io/router.entrypoints: web
+    hostname: oauth2-proxy.localhost
