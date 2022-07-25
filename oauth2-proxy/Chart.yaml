@@ -8,3 +8,6 @@ dependencies:
   - name: oauth2-proxy
     version: 3.0.1
     repository: https://charts.bitnami.com/bitnami
+  - name: resources
+    version: 1.0.0
+    repository: "file://resources"
