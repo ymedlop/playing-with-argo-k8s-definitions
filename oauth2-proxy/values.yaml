@@ -13,7 +13,7 @@ oauth2-proxy:
     - --pass-access-token=true
     - --set-xauthrequest=true
   ingress:
-    enabled: true
+    enabled: false
     tls: true
     selfSigned: true
     annotations:
