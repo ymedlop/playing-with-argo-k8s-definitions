@@ -34,7 +34,7 @@ spec:
         - name: DEFAULT_PROVIDER
           value: oidc
         - name: PROVIDERS_OIDC_ISSUER_URL
-          value: "https://login.microsoftonline.com/9bdc7505-8e8f-4c10-94aa-c87e1bdf110a/v2.0"
+          value: "https://sts.windows.net/9bdc7505-8e8f-4c10-94aa-c87e1bdf110a"
         - name: PROVIDERS_OIDC_CLIENT_ID
           valueFrom:
             secretKeyRef:
