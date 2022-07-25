@@ -14,8 +14,8 @@ oauth2-proxy:
     - --set-xauthrequest=true
   ingress:
     enabled: true
+    tls: true
     annotations:
        kubernetes.io/ingress.class: traefik
        traefik.ingress.kubernetes.io/router.entrypoints: websecure
     hostname: oauth2-proxy.localhost
-    tls: true
