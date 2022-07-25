@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: oauth2-proxy
+spec:
+  destination:
+    namespace: oauth2-proxy
+    server: {{ .Values.spec.destination.server }}
+  project: oauth2-proxy
+  source:
+    path: ./oauth2-proxy
+    repoURL: {{ .Values.spec.source.repoURL }}
+    targetRevision: {{ .Values.spec.source.targetRevision }}
+    helm:
+      valueFiles:
+        - values.yaml
+  syncPolicy:
+    automated:
+      prune: {{ .Values.spec.syncPolicy.automated.prune }}
+      selfHeal: {{ .Values.spec.syncPolicy.automated.selfHeal }}
+    syncOptions:
+    {{- range .Values.spec.syncPolicy.syncOptions }}
+      - {{ . | quote }}
+    {{- end }}
