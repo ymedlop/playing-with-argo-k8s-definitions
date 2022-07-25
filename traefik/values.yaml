@@ -27,3 +27,4 @@ traefik:
     - --certificatesResolvers.default.acme.dnsChallenge.provider=cloudflare
     - --certificatesresolvers.default.acme.email=ymedlop@localhost
     - --certificatesresolvers.default.acme.storage=acme.json
+    - --certificatesresolvers.default.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory
