@@ -8,7 +8,6 @@ oauth2-proxy:
     tag: 7.2.1-debian-10-r154
   args:
     - --http-address=0.0.0.0:4180
-    - --pass-user-headers
     - --provider=azure
     - --email-domain=*
     - --azure-tenant=9bdc7505-8e8f-4c10-94aa-c87e1bdf110a
