@@ -22,9 +22,3 @@ traefik:
     - --providers.kubernetescrd
     - --providers.kubernetesingress
     - --providers.kubernetesingress.ingressendpoint.publishedservice=traefik/traefik
-    - --serverstransport.insecureskipverify=true
-    - --certificatesResolvers.le.acme.dnsChallenge=true
-    - --certificatesResolvers.le.acme.dnsChallenge.provider=cloudflare
-    - --certificatesresolvers.le.acme.email=ymedlop@localhost
-    - --certificatesresolvers.le.acme.storage=acme.json
-    - --certificatesresolvers.le.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory

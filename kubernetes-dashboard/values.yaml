@@ -9,8 +9,3 @@ kubernetes-dashboard:
      - kubernetes-dashboard.localhost
     paths:
       - /
-  service:
-    externalPort: 80
-  protocolHttp: true
-  extraArgs:
-    - --enable-insecure-login=true
