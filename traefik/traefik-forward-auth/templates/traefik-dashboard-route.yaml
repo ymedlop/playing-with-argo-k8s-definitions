@@ -13,5 +13,3 @@ spec:
           name: api@internal
       middlewares:
         - name: traefik-forward-auth
-  tls:
-    certResolver: default
