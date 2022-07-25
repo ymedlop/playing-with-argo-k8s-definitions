@@ -10,9 +10,9 @@ oauth2-proxy:
     - --azure-tenant=9bdc7505-8e8f-4c10-94aa-c87e1bdf110a
     - --oidc-issuer-url=https://sts.windows.net/9bdc7505-8e8f-4c10-94aa-c87e1bdf110a/
     - --email-domain=*
-    - '--request-logging=true'
-    - '--auth-logging=true'
-    - '--standard-logging=true'
+    - --request-logging=true
+    - --auth-logging=true
+    - --standard-logging=true
 
   ingress:
     # TODO:
