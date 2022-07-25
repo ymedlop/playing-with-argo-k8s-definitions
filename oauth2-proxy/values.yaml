@@ -9,9 +9,9 @@ oauth2-proxy:
     - --provider=oidc
     - --cookie-domain=https://login.microsoftonline.com/v2.0/2d66d1f3-867b-481c-b6ed-764efd4af6a8
     - --email-domain=*
-    - --oidc-issuer-url=https://login.microsoftonline.com/{9bdc7505-8e8f-4c10-94aa-c87e1bdf110a}/v2.0
-    - --login-url=https://login.microsoftonline.com/{9bdc7505-8e8f-4c10-94aa-c87e1bdf110a}/v2.0/oauth2/authorize
-    - --redeem-url=https://login.microsoftonline.com/{9bdc7505-8e8f-4c10-94aa-c87e1bdf110a}/v2.0/oauth2/token 
+    - --oidc-issuer-url=https://login.microsoftonline.com/9bdc7505-8e8f-4c10-94aa-c87e1bdf110a}/v2.0
+    - --login-url=https://login.microsoftonline.com/9bdc7505-8e8f-4c10-94aa-c87e1bdf110a/v2.0/oauth2/authorize
+    - --redeem-url=https://login.microsoftonline.com/9bdc7505-8e8f-4c10-94aa-c87e1bdf110a/v2.0/oauth2/token 
     - --oidc-jwks-url=https://login.microsoftonline.com/common/discovery/keys
     - --profile-url=https://graph.microsoft.com/v1.0/me
     - --scope='openid email profile offline_access'
