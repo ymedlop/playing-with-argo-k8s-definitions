@@ -23,3 +23,7 @@ traefik:
     - --providers.kubernetesingress
     - --providers.kubernetesingress.ingressendpoint.publishedservice=traefik/traefik
     - --serverstransport.insecureskipverify=true
+    - --certificatesResolvers.default.acme.dnsChallenge=true
+    - --certificatesResolvers.default.acme.dnsChallenge.provider=cloudflare
+    - --certificatesresolvers.default.acme.email=ymedlop@localhost
+    - --certificatesresolvers.default.acme.storage=acme.json
