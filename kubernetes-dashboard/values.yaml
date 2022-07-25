@@ -4,7 +4,7 @@ kubernetes-dashboard:
     annotations:
        kubernetes.io/ingress.class: traefik
        traefik.ingress.kubernetes.io/router.entrypoints: web
-       traefik.ingress.kubernetes.io/router.middlewares: traefik-forward-auth
+       traefik.ingress.kubernetes.io/router.middlewares: traefik-traefik-forward-auth
     hosts:
      - kubernetes-dashboard.localhost
     paths:
