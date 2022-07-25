@@ -10,5 +10,5 @@ spec:
     app: traefik-forward-auth
   ports:
   - name: auth-http
-    port: 4181
+    port: 80
     targetPort: 4181

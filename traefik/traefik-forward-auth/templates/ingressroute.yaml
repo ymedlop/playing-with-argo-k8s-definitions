@@ -1,0 +1,16 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: traefik-forward-auth-route
+spec:
+  entryPoints:
+    - web
+    - websecure
+  routes:
+    - match: Host(`traefikauth.localhost`)
+      kind: Rule
+      services:
+        - name: traefik-forward-auth
+          port: 80
+  tls:
+    certResolver: default
