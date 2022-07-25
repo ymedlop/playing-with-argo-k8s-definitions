@@ -11,7 +11,6 @@ oauth2-proxy:
     - --http-address=0.0.0.0:4180
     - --azure-tenant=9bdc7505-8e8f-4c10-94aa-c87e1bdf110a
     - --pass-access-token=true
-    - --resource=6dae42f8-4368-4678-94ff-3960e28e3630
     - --set-xauthrequest=true
   ingress:
     enabled: true
