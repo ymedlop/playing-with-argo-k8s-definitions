@@ -18,3 +18,4 @@ oauth2-proxy:
        kubernetes.io/ingress.class: traefik
        traefik.ingress.kubernetes.io/router.entrypoints: websecure
     hostname: oauth2-proxy.localhost
+    tls: true
