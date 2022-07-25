@@ -24,8 +24,14 @@ spec:
         - containerPort: 4181
           protocol: TCP
         env:
+        - name: COOKIE_DOMAIN
+          value: localhost
+        - name: INSECURE_COOKIE
+          value: false
+        - name: AUTH_HOST
+          value: traefik-forward-auth.localhost
         - name: LOG_LEVEL
-          value:  trace
+          value: trace
         # INSECURE_COOKIE is required unless using https entrypoint
         - name: INSECURE_COOKIE
           value: "true"
