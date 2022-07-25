@@ -3,7 +3,7 @@ oauth2-proxy:
     cookieSecret: wquLuiPVJ2vVLgWlU8Vwxy6xXS5RLBxqwwkycyGST_I=
     # Expires: 7/26/2022
     clientSecret: uZJ8Q~kw9jsFryOoxolPnkTmBnEL__OAfqO~Yac1
-    clientID: 9bdc7505-8e8f-4c10-94aa-c87e1bdf110a
+    clientID: 2d66d1f3-867b-481c-b6ed-764efd4af6a8
   args:
     - --provider=azure
     - --oidc-issuer-url=https://sts.windows.net/9bdc7505-8e8f-4c10-94aa-c87e1bdf110a/
