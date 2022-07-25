@@ -7,7 +7,6 @@ oauth2-proxy:
   args:
     - --http-address=0.0.0.0:4180
     - --provider=oidc
-    - --cookie-domain=https://login.microsoftonline.com/v2.0/2d66d1f3-867b-481c-b6ed-764efd4af6a8
     - --email-domain=*
     - --oidc-issuer-url=https://login.microsoftonline.com/9bdc7505-8e8f-4c10-94aa-c87e1bdf110a/v2.0
     - --login-url=https://login.microsoftonline.com/9bdc7505-8e8f-4c10-94aa-c87e1bdf110a/v2.0/oauth2/authorize
