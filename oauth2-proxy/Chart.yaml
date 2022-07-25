@@ -1,0 +1,10 @@
+apiVersion: v2
+name: definitions
+description: definitions
+type: application
+version: 1.0.0
+
+dependencies:
+  - name: oauth2-proxy
+    version: 3.0.1
+    repository: https://charts.bitnami.com/bitnami
