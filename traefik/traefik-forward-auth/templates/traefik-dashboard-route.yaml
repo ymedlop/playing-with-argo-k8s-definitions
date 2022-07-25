@@ -11,8 +11,8 @@ spec:
       services:
         - kind: TraefikService
           name: api@internal
-      #middlewares:
-      #  - name: traefik-forward-auth
+      middlewares:
+        - name: traefik-forward-auth
   tls:
     certResolver: le
     domains:

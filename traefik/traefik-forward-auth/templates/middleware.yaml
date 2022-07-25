@@ -4,7 +4,7 @@ metadata:
   name: traefik-forward-auth
 spec:
   forwardAuth:
-    address: https://traefik-forward-auth.localhost
+    address: http://traefik-forward-auth:4181
     trustForwardHeader: true
     authResponseHeaders:
       - X-Forwarded-User
