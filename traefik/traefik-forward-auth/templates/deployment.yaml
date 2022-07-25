@@ -27,7 +27,7 @@ spec:
         - name: COOKIE_DOMAIN
           value: localhost
         - name: INSECURE_COOKIE
-          value: false
+          value: "false"
         - name: AUTH_HOST
           value: traefik-forward-auth.localhost
         - name: LOG_LEVEL
