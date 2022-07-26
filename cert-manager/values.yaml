@@ -1,4 +1,5 @@
 cert-manager:
+  fullnameOverride: cert-manager
   installCRDs: true
   startupapicheck:
     timeout: 5m
