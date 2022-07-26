@@ -16,9 +16,9 @@ traefik:
     - --entrypoints.web.address=:8000/tcp
     - --entryPoints.web.forwardedHeaders.insecure
     - --entrypoints.websecure.address=:8443/tcp
-    - --entryPoints.websecure.forwardedHeaders.insecure
     - --api.dashboard=true
     - --ping=true
     - --providers.kubernetescrd
     - --providers.kubernetesingress
+    - --providers.kubernetesingress.ingressclass=traefik2
     - --providers.kubernetesingress.ingressendpoint.publishedservice=traefik/traefik
