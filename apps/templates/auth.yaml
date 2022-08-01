@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: auth-definitions
+spec:
+  destination:
+    namespace: auth
+    server: {{ .Values.spec.destination.server }}
+  project: auth
+  source:
+    directory:
+      jsonnet: {}
+      recurse: true
+    path: ./auth
+    repoURL: {{ .Values.spec.source.repoURL }}
+    targetRevision: {{ .Values.spec.source.targetRevision }}
+  syncPolicy:
+    automated:
+      prune: {{ .Values.spec.syncPolicy.automated.prune }}
+      selfHeal: {{ .Values.spec.syncPolicy.automated.selfHeal }}
+    syncOptions:
+    {{- range .Values.spec.syncPolicy.syncOptions }}
+      - {{ . | quote }}
+    {{- end }}
