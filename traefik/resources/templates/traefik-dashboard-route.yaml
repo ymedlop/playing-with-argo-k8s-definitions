@@ -14,8 +14,4 @@ spec:
       middlewares:
         - name: traefik-forward-auth
   tls:
-    certResolver: default
-    domains:
-      - main: localhost
-        sans:
-          - "*.localhost"
+    secretName: traefik-localhost

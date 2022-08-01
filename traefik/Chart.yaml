@@ -8,6 +8,6 @@ dependencies:
   - name: traefik
     version: 10.24.0
     repository: https://helm.traefik.io/traefik
-  - name: traefik-forward-auth
+  - name: resources
     version: 1.0.0
-    repository: "file://traefik-forward-auth"
+    repository: "file://resources"

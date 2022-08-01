@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: traefik-localhost
+spec:
+  commonName: traefik.localhost.com
+  secretName: traefik-localhost
+  dnsNames:
+    - traefik.localhost.com
+  issuerRef:
+    name: letsencrypt-localhost-traefik2
+    kind: ClusterIssuer

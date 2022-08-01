@@ -1,5 +1,0 @@
-apiVersion: v2
-name: traefik-forward-auth
-description: traefik-forward-auth
-type: application
-version: 1.0.0
