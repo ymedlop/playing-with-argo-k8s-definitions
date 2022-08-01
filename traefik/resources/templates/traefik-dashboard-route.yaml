@@ -7,11 +7,11 @@ spec:
     - websecure
   routes:
     - kind: Rule
-      match: Host(`traefik.localhost`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
+      match: Host(`traefik.localhost.com`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
       services:
         - kind: TraefikService
           name: api@internal
       middlewares:
-        - name: traefik-forward-authh
+        - name: traefik-forward-auth
   tls:
     secretName: traefik-localhost
