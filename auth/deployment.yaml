@@ -26,7 +26,7 @@ spec:
             - name: URL_PATH
               value: /dashboard
             - name: AUTH_HOST
-              value: auth.localhost.com
+              value: traefik.localhost.com
             - name: COOKIE_DOMAIN
               value: localhost.com
             - name: LOG_LEVEL
