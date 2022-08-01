@@ -23,6 +23,8 @@ spec:
             - containerPort: 4181
               protocol: TCP
           env:
+            - nane: URL_PATH
+              value: dashboard
             - name: AUTH_HOST
               value: auth.localhost
             - name: COOKIE_DOMAIN
