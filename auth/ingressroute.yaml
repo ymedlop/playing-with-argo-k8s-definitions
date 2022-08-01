@@ -11,5 +11,10 @@ spec:
       services:
         - name: traefik-forward-auth
           port: 4181
+    - match: Host(`auth.localhost.com`)
+      kind: Rule
+      services:
+        - name: traefik-forward-auth
+          port: 4181
   tls:
     secretName: auth-localhost
