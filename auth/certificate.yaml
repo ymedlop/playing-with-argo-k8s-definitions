@@ -3,10 +3,10 @@ kind: Certificate
 metadata:
   name: auth-localhost
 spec:
-  commonName: auth.localhost
+  commonName: auth.localhost.com
   secretName: auth-localhost
   dnsNames:
-    - auth.localhost
+    - auth.localhost.com
   issuerRef:
     name: letsencrypt-localhost-traefik2
     kind: ClusterIssuer
