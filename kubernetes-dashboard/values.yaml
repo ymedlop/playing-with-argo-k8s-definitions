@@ -11,4 +11,4 @@ kubernetes-dashboard:
     paths:
       - /
     tls:
-        secretName: kubernetes-dashboard-localhost
+      secretName: kubernetes-dashboard-localhost
