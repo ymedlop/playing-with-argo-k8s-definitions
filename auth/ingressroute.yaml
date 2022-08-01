@@ -12,4 +12,4 @@ spec:
         - name: traefik-forward-auth
           port: 4181
   tls:
-    certResolver: default
+    secretName: auth-localhost

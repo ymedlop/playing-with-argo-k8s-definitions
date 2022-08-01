@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: auth-localhost
+spec:
+  commonName: auth.localhost
+  secretName: auth-localhost
+  dnsNames:
+    - auth.localhost
+  issuerRef:
+    name: letsencrypt-localhost-traefik2
+    kind: ClusterIssuer
