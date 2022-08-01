@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
@@ -10,13 +10,16 @@ metadata:
   name: app
 spec:
   rules:
-  - host: traefik.localhost.com
-    http:
-      paths:
-      - backend:
-          serviceName: traefik
-          servicePort: 80
-        path: /
+    - host: traefik.localhost.com
+      http:
+        paths:
+          - backend:
+              service:
+                name: kubernetes-traefik
+                port:
+                  number: 80
+            path: /
+            pathType: ImplementationSpecific
   tls:
   - hosts:
     - traefik.localhost.com
