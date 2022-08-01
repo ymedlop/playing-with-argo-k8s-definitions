@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: traefik-forward-auth
+  name: kubernetes-dashboard-forward-auth
   labels:
-    app: traefik-forward-auth
+    app: kubernetes-dashboard-forward-auth
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: traefik-forward-auth
+      app: kubernetes-dashboard-forward-auth
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: traefik-forward-auth
+        app: kubernetes-dashboard-forward-auth
     spec:
       containers:
         - image: thomseddon/traefik-forward-auth
-          name: traefik-forward-auth
+          name: kubernetes-dashboard-forward-auth
           ports:
             - containerPort: 4181
               protocol: TCP
@@ -43,15 +43,15 @@ spec:
             - name: PROVIDERS_OIDC_CLIENT_ID
               valueFrom:
                 secretKeyRef:
-                  name: traefik-forward-auth-secrets
-                  key: traefik-forward-auth-oidc-client-id
+                  name: kubernetes-dashboard-forward-auth-secrets
+                  key: kubernetes-dashboard-forward-auth-oidc-client-id
             - name: PROVIDERS_OIDC_CLIENT_SECRET
               valueFrom:
                 secretKeyRef:
-                  name: traefik-forward-auth-secrets
-                  key: traefik-forward-auth-oidc-client-secret
+                  name: kubernetes-dashboard-forward-auth-secrets
+                  key: kubernetes-dashboard-forward-auth-oidc-client-secret
             - name: SECRET
               valueFrom:
                 secretKeyRef:
-                  name: traefik-forward-auth-secrets
-                  key: traefik-forward-auth-secret
+                  name: kubernetes-dashboard-forward-auth-secrets
+                  key: kubernetes-dashboard-forward-auth-secret

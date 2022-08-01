@@ -1,7 +1,7 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: Middleware
 metadata:
-  name: traefik-forward-auth
+  name: kubernetes-dashboard-forward-auth
 spec:
   forwardAuth:
     address: http://traefik-forward-auth:4181
