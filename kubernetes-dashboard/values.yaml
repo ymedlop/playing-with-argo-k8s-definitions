@@ -7,6 +7,6 @@ kubernetes-dashboard:
        traefik.ingress.kubernetes.io/router.tls: "true"
        traefik.ingress.kubernetes.io/router.middlewares: traefik-forward-auth@kubernetescrd
     hosts:
-     - kubernetes-dashboard.localhost.com/
+     - kubernetes-dashboard.localhost.com
     paths:
       - /
