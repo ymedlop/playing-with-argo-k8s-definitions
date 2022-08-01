@@ -3,10 +3,12 @@ kubernetes-dashboard:
     enabled: true
     annotations:
        kubernetes.io/ingress.class: traefik2
-       traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
+       traefik.ingress.kubernetes.io/router.entrypoints: websecure
        traefik.ingress.kubernetes.io/router.tls: "true"
        traefik.ingress.kubernetes.io/router.middlewares: kubernetes-dashboard-traefik-forward-auth@kubernetescrd
     hosts:
      - kubernetes-dashboard.localhost.com
     paths:
       - /
+    tls:
+        secretName: kubernetes-dashboard-localhost
