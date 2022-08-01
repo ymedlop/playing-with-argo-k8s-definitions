@@ -19,6 +19,6 @@ spec:
         - kind: TraefikService
           name: api@internal
       middlewares:
-        - name: auth-traefik-forward-auth@kubernetescrd
+        - name: traefik-forward-auth
   tls:
     secretName: traefik-localhost
