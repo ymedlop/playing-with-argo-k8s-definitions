@@ -9,8 +9,9 @@ spec:
     - kind: Rule
       match: Host(`kubernetes-dashboard.localhost.com`)
       services:
-        - kind: TraefikService
-          name: api@internal
+        - kind: Service
+          name: kubernetes-dashboard
+          port: 443
       middlewares:
         - name: traefik-forward-auth
   tls:
