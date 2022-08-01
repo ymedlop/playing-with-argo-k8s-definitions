@@ -8,5 +8,5 @@ spec:
   dnsNames:
     - traefik.localhost.com
   issuerRef:
-    name: letsencrypt-localhost-traefik2
+    name: letsencrypt-traefik2
     kind: ClusterIssuer

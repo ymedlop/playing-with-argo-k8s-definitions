@@ -1,7 +1,7 @@
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
 metadata:
-  name: letsencrypt-localhost-traefik2
+  name: letsencrypt-traefik2
 spec:
   acme:
     # You must replace this email address with your own.
