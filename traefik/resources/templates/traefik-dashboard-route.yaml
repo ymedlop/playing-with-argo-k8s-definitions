@@ -12,13 +12,6 @@ spec:
         - kind: TraefikService
           name: api@internal
       middlewares:
-        - name: traefik-forward-auth
-    - kind: Rule
-      match: Host(`traefik.localhost.com`) && (PathPrefix(`/dashboard`) || PathPrefix(`/api`))
-      services:
-        - kind: TraefikService
-          name: api@internal
-      middlewares:
-        - name: traefik-forward-auth
+        - name: traefik-forward-authh
   tls:
     secretName: traefik-localhost
