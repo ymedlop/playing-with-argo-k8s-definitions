@@ -23,6 +23,10 @@ spec:
             - containerPort: 4181
               protocol: TCP
           env:
+            - name: COOKIE_NAME
+              value: _kubernetes_dashboard_forward_auth
+            - name: CSRF_COOKIE_NAME
+              value: _kubernetes_dashboard_forward_auth_csrf
             - name: URL_PATH
               value: /dashboard
             - name: AUTH_HOST
