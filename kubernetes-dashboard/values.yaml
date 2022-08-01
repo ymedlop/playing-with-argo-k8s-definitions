@@ -1,7 +1,7 @@
 kubernetes-dashboard:
   protocolHttp: true
   ingress:
-    enabled: false
+    enabled: true
     annotations:
        kubernetes.io/ingress.class: traefik2
        traefik.ingress.kubernetes.io/router.entrypoints: websecure
