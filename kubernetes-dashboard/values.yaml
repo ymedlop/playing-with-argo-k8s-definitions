@@ -1,12 +1,15 @@
 kubernetes-dashboard:
   protocolHttp: true
+  service:
+    externalPort: 80
   ingress:
-    enabled: false
+    enabled: true
     annotations:
        kubernetes.io/ingress.class: traefik2
-       traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
+       traefik.frontend.rule.type: PathPrefixStrip
+       traefik.ingress.kubernetes.io/router.entrypoints: websecure
        traefik.ingress.kubernetes.io/router.tls: "true"
-       #traefik.ingress.kubernetes.io/router.middlewares: kubernetes-dashboard-traefik-forward-auth@kubernetescrd
+       traefik.ingress.kubernetes.io/router.middlewares: kubernetes-dashboard-traefik-forward-auth@kubernetescrd
     hosts:
      - kubernetes-dashboard.localhost.com
     paths:
