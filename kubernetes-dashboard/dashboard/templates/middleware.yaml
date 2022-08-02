@@ -4,6 +4,6 @@ metadata:
   name: kubernetes-dashboard-forward-auth
 spec:
   forwardAuth:
-    address: http://kubernetes-dashboard-forward-auth:4181
+    address: http://kubernetes-dashboard-forward-auth.kubernetes-dashboard.svc.cluster.local:4181
     authResponseHeaders:
       - X-Forwarded-User

@@ -30,7 +30,7 @@ spec:
             - name: AUTH_HOST
               value: kubernetes-dashboard.localhost.com
             - name: COOKIE_DOMAIN
-              value: localhost.com
+              value: kubernetes-dashboard.localhost.com
             - name: LOG_LEVEL
               value: trace
             - name: INSECURE_COOKIE

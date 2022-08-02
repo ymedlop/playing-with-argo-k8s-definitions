@@ -24,15 +24,15 @@ spec:
               protocol: TCP
           env:
             - name: COOKIE_NAME
-              value: _kubernetes_dashboard_forward_auth
+              value: _traefik_dashboard_forward_auth
             - name: CSRF_COOKIE_NAME
-              value: _kubernetes_dashboard_forward_auth_csrf
+              value: _traefik_dashboard_forward_auth_csrf
             - name: URL_PATH
               value: /dashboard
             - name: AUTH_HOST
               value: traefik.localhost.com
             - name: COOKIE_DOMAIN
-              value: localhost.com
+              value: traefik.localhost.com
             - name: LOG_LEVEL
               value: trace
             - name: INSECURE_COOKIE
