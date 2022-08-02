@@ -22,6 +22,9 @@ roleRef:
   kind: Role
   name: kubernetes-dashboard-access-role
 subjects:
-- kind: Group
-  #name: groupObjectId
-  name: "658d95b9-7cfc-4a9e-9f0e-94573036adc9"  
+  # - kind: Group
+  #   #name: groupObjectId
+  #   name: "658d95b9-7cfc-4a9e-9f0e-94573036adc9"
+  - apiGroup: rbac.authorization.k8s.io
+    kind: User
+    name: https://sts.windows.net/9bdc7505-8e8f-4c10-94aa-c87e1bdf110a/ymedlop_hotmail.com#EXT#@ymedlophotmail.onmicrosoft.com
