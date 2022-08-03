@@ -12,6 +12,7 @@ spec:
     repoURL: {{ .Values.spec.source.repoURL }}
     targetRevision: {{ .Values.spec.source.targetRevision }}
     helm:
+      passCredentials: true
       valueFiles:
         - values.yaml
   syncPolicy:
