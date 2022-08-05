@@ -1,6 +1,6 @@
 kubernetes-dashboard:
   extraArgs:
-    --authentication-mode=token
+    - --authentication-mode=token
   protocolHttp: true
   service:
     externalPort: 80
